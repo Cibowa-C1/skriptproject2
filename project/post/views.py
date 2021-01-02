@@ -22,5 +22,5 @@ def regex(request, godina, mesec):
 
 
 def hello(request):
-    return render(request, 'poruke/hello.html')
+    return render(request, 'post/hello.html')
 

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'poruke.apps.PorukeConfig'
+    'post.apps.PorukeConfig'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'poruke/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'post/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
