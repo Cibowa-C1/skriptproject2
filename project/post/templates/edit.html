@@ -10,11 +10,12 @@
         {% csrf_token %}
         <div class="form-group">
             <label for="{{ form.title.id_for_label }}">{{ form.title.label_tag }}</label>
-            <input type="text" class="form-control" id="{{ form.title.id_for_label }}" name="{{ form.title.name }}" value="{{ form.title.value }}">
+            <input type="text" class="form-control" id="{{ form.title.id_for_label }}" name="{{ form.title.name }}" value="{{ form.title.value }}" placeholder="artist - name"  maxlength="40" required>
             {% if form.title.errors %}
                 <div class="alert alert-danger">
                     <ul style="text-align: left">
                         {% for error in form.title.errors %}
+
                             <li>{{ error }}</li>
                         {% endfor %}
                     </ul>
@@ -24,7 +25,7 @@
 
         <div class="form-group">
             <label for="{{ form.content.id_for_label }}">{{ form.content.label_tag }}</label>
-            <textarea class="form-control" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}" rows="5">{{ form.content.value }}</textarea>
+            <textarea class="form-control" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}" rows="5" required maxlength="20">{{ form.content.value }}</textarea>
             {% if form.content.errors %}
                 <div class="alert alert-danger">
                     <ul style="text-align: left">
